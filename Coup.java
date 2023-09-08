@@ -21,7 +21,7 @@ public class Coup {
                 '}';
     }
 
-    public static Coup saisirCoup(Scanner scan) throws PasCoup {
+    public static Coup saisirCoup(Scanner scan){
         Coup c = null;
         boolean ok =false;
         while (!ok) {
