@@ -27,6 +27,7 @@ public class Partie {
     }
     public void unTour(){
         while(nbTour != nbToursMax){
+
         }
     }
 }
