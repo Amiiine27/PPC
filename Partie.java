@@ -2,7 +2,6 @@ public class Partie {
     private int nbToursMax;
     private Joueur joueur1;
     private Joueur joueur2;
-    private int nbTour = 0;
 
     public Partie(Joueur joueur1,Joueur joueur2,int nbToursMax) throws PasTour{
         if(nbToursMax >0){
@@ -11,6 +10,10 @@ public class Partie {
             joueur2 = joueur2;
         }
         else throw new PasTour();
+    }
+
+    public void go(){
+        unTour();
     }
 
     public void resoudreTour(){
@@ -25,9 +28,19 @@ public class Partie {
             return;
         }
     }
-    public void unTour(){
-        while(nbTour != nbToursMax){
 
+    public int getNbToursMax(){
+        return nbToursMax;
+    }
+    public void SetNbToursMax(int nbTour){
+        nbToursMax = nbTour;
+    }
+    public void unTour(){
+        SetNbToursMax(getNbToursMax() - 1);
+        while(nbToursMax >=0){
+            joueur1.choisitUncoup();
+            joueur2.choisitUncoup();
+            resoudreTour();
         }
     }
 }
