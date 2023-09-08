@@ -1,4 +1,7 @@
+
 import java.util.Objects;
+
+import java.util.Scanner;
 
 public class Coup {
     private String nom;
@@ -21,7 +24,21 @@ public class Coup {
                 '}';
     }
 
-
+    public static Coup saisirCoup(Scanner scan) throws PasCoup {
+        Coup c = null;
+        boolean ok =false;
+        while (!ok) {
+            try {
+                c = new Coup(scan.nextLine());
+                String s = scan.nextLine();
+                System.out.println("ok");
+                return c;
+            } catch (PasCoup e){
+                System.out.println("pas ok");
+            }
+        }
+        return c;
+    }
 
     @Override
     public boolean equals(Object o) {

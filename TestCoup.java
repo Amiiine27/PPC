@@ -1,9 +1,8 @@
-import static org.junit.Assert.*;
-
-import java.util.Scanner;
-
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class TestCoup {
     private Coup cis;
