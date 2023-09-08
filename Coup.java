@@ -37,5 +37,17 @@ public class Coup {
         return c;
     }
 
+    public boolean bat(Coup c) {
+        if (this.getNom().equals("pierre") && c.getNom().equals("ciseau")) {
+            return true;
+        } else if (this.getNom().equals("papier") && c.getNom().equals("pierre")){
+            return true;
+        } else if (this.getNom().equals("ciseau") && c.getNom().equals("papier")){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }
