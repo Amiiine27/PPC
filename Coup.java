@@ -1,6 +1,5 @@
 
 import java.util.Objects;
-
 import java.util.Scanner;
 
 public class Coup {
@@ -46,6 +45,18 @@ public class Coup {
         if (o == null || getClass() != o.getClass()) return false;
         Coup coup = (Coup) o;
         return Objects.equals(nom, coup.nom);
+    }
+
+    public boolean bat(Coup c) {
+        if (this.getNom().equals("pierre") && c.getNom().equals("ciseau")) {
+            return true;
+        } else if (this.getNom().equals("papier") && c.getNom().equals("pierre")){
+            return true;
+        } else if (this.getNom().equals("ciseau") && c.getNom().equals("papier")){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
