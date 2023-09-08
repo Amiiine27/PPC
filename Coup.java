@@ -7,4 +7,17 @@ public class Coup {
         }
         else throw new PasCoup();
     }
+
+    public String getNom() {
+        return nom;
+    }
+
+    @Override
+    public String toString() {
+        return "Coup{" +
+                "nom='" + nom + '\'' +
+                '}';
+    }
+
+
 }
