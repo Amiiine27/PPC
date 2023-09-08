@@ -19,6 +19,9 @@ public abstract class Joueur {
     public String getNom() {
         return nom;
     }
+    public int getScore(){
+        return score;
+    }
     public abstract void choisitUncoup();
 
     @Override
