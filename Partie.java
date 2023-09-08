@@ -13,7 +13,9 @@ public class Partie {
     }
 
     public void go(){
-        unTour();
+        while(nbToursMax >0){
+            unTour();
+        }
     }
 
     public void resoudreTour(){
@@ -36,11 +38,9 @@ public class Partie {
         nbToursMax = nbTour;
     }
     public void unTour(){
-        SetNbToursMax(getNbToursMax() - 1);
-        while(nbToursMax >=0){
+            SetNbToursMax(getNbToursMax() - 1);
             joueur1.choisitUncoup();
             joueur2.choisitUncoup();
             resoudreTour();
         }
     }
-}
